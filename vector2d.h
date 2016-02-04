@@ -4,8 +4,8 @@
 class Vector2d {
 private:
     //member variables - private, meaning only accessible via getters and setters
-    double x_;
-    double y_;
+    double _x;
+    double _y;
 
 public:
     // constructor declarations
