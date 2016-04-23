@@ -1,6 +1,5 @@
 #include "vector2d.h"
 
-#include <iostream>
 #include <UnitTest++/UnitTest++.h>
 
 using namespace std;
