@@ -31,19 +31,27 @@ void Vector2d::set_y(double y) {
 
 Vector2d add(const Vector2d& a, const Vector2d& b) { //const indicates that parameters that are const cannot be changed
     //Implement Here.
+    return Vector2d((a.get_x() + b.get_x()), (a.get_y() + b.get_y()));
 }
 
 Vector2d subtract(const Vector2d& a, const Vector2d& b) {
     //Implement Here.
+    return Vector2d((a.get_x() - b.get_x()), (a.get_y() - b.get_y()));
+
 }
 
 bool operator==(const Vector2d& a, const Vector2d& b) {
     //Implement Here.
+    if (a.get_x() == b.get_x() && a.get_y() == b.get_y())
+        return true;
+    else
+        return false;
+
 }
 
 std::ostream& operator<<(std::ostream& os, const Vector2d& v)
 {
-    //Implement Here.
+    os << v.get_x() << " " << v.get_y() ;
 }
 
 // operator overloading of '+' and '-'
@@ -52,5 +60,10 @@ Vector2d operator+(const Vector2d& a, const Vector2d& b) {
 }
 
 Vector2d operator-(const Vector2d& a, const Vector2d& b) {
-    return subtract(a, b);
+    //return subtract(a, b);
+    return Vector2d((a.get_x() - b.get_x()), (a.get_y() - b.get_y()));
+}
+
+bool operator>(const Vector2d& a, const Vector2d& b){
+    return a.get_y() > b.get_y();
 }
